@@ -28,7 +28,7 @@ An interactive element containing an image of an area on the coordinate plane (i
 
 If the radius of the area is set, a mouse click on the image should be processed by a JavaScript function that determines the coordinates of the point clicked by the user and sends the resulting coordinates to the server to check whether it was hit.
 
-В противном случае, после клика по картинке должно выводиться сообщение о невозможности определения координат точки.
+Otherwise, after clicking on the picture, a message should be displayed stating that it is impossible to determine the coordinates of the point.
 
 After checking that a point has entered the area, the image must be updated taking into account the results of this check (i.e., a new point must appear on it).
 
