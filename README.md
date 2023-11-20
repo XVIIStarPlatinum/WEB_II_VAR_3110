@@ -1,7 +1,9 @@
 Лабораторная работа #2
 
 Variant: 3110
-![area](Task.svg)
+
+![area](task.png)
+
 Develop a web application based on servlets and JSP that determines whether a point on a coordinate plane falls within a given area.
 
 The application must be implemented according to the MVC pattern and consist of the following elements:
