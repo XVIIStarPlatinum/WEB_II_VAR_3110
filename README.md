@@ -1,4 +1,6 @@
-Лабораторная работа #2
+Second lab work of web-programming course, SE ITMO 
+
+Used technologies: Java/Jakarta EE, JSP, MVC, WildFly
 
 Variant: 3110
 
