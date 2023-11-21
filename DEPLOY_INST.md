@@ -5,7 +5,7 @@
 https://docs.google.com/document/d/1ERKz7M5CnF_sDTW6Fkhw4zmlbiLbEUtRtWUz8PIujSQ/edit
 В 316 строчке в standalone.sh убираем скобки AGENT_SET = $(...)
 В файле standalone.xml листаем вниз и ставим свой offset. Ваш порт будет 8080 + offset
-В папку deployments	загружаем war файл
+В папку deployments загружаем war файл
 Запускаем bin/standalone.sh
 Заходим в командную строку и пробрасываем порты:
 ssh -L PORT:localhost:PORT sXXXXXX@helios.se.ifmo.ru -p 2222
@@ -18,10 +18,10 @@ ssh -L PORT:localhost:PORT sXXXXXX@helios.se.ifmo.ru -p 2222
 =$echo "MODULE_OPTS" | $GREP "\-javaagent:
 
 
-возвращаемся в главную папку WildFly, открываем standalone/configuration/standalone.xml, в самом конце есть тег socket-binding-group, у него есть атрибут port-offset, которому присваивается смещение, там нужно написать свое число:
+Возвращаемся в главную папку WildFly, открываем standalone/configuration/standalone.xml, в самом конце есть тег socket-binding-group, у него есть атрибут port-offset, которому присваивается смещение, там нужно написать свое число:
 
-port-offset="${jboss.socket.binding.port-offset:<ваше смещение>
-}
+port-offset="${jboss.socket.binding.port-offset:<ваше смещение>}
+
 Тогда ваш номер вашего порта будет равен значению port из дочернего тега <socket-binding name="http" port="${jboss.http.port:8080}"/>( по дефолту это 8080) плюс смещение.
 
 Например, здесь номер порта будет 8080+1020 = 9100:
@@ -33,12 +33,11 @@ port-offset="${jboss.socket.binding.port-offset:<ваше смещение>
 			*тут другие дочерние теги *
 </socket-binding-group>
 
-Возвращаемся в главную директорию WildFly, переходим в каталог
-standalone/deployments, перетаскиваем сюда из идеи ваш собранный варник(убедитесь, что вы загружаете нормальный вариант)
+Возвращаемся в главную директорию WildFly, переходим в каталог standalone/deployments, перетаскиваем сюда из идеи ваш собранный варник(убедитесь, что вы загружаете нормальный вариант)
 bash bin/standalone.sh
 возвращаемся в главную директорию WildFly, прописываем команду, это запускает ваш сервер. Могут быть ошибки, например, если этот порт уже занят, придется вернуться на шаг 3) и указать другое смещение
 
-Открываете командную строку вашей локальной машины!!! Не с Гелиосом!, и прописываете команду:
+Открываете командную строку вашей локальной машины!!! Не с Гелиосом! И прописываете команду:
 ssh -L PORT:localhost:PORT sXXXXXX@helios.se.ifmo.ru -p 2222
 вместо PORT без пробелов подставляете номер вашего порта, полученного на шаге 3)
 Далее вам нужно будет ввести пароль от хелиоса
