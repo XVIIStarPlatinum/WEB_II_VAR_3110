@@ -26,12 +26,12 @@ port-offset="${jboss.socket.binding.port-offset:<ваше смещение>}
 
 Например, здесь номер порта будет 8080+1020 = 9100:
 
-'<socket-binding-group name="standard-sockets" default-interface="public" port-offset="${jboss.socket.binding.port-offset:1020}">
-    	<socket-binding name="ajp" port="${jboss.ajp.port:8009}"/>
-    	<socket-binding name="http" port="${jboss.http.port:8080}"/>
-    	<socket-binding name="https" port="${jboss.https.port:8443}"/>
+"<"socket-binding-group name="standard-sockets" default-interface="public" port-offset="${jboss.socket.binding.port-offset:1020}"">"
+    	"<"socket-binding name="ajp" port="${jboss.ajp.port:8009}"/">"
+    	"<"socket-binding name="http" port="${jboss.http.port:8080}"/">"
+    	"<"socket-binding name="https" port="${jboss.https.port:8443}"/">"
 			*тут другие дочерние теги *
-</socket-binding-group>'
+"<"/socket-binding-group">"
 
 Возвращаемся в главную директорию WildFly, переходим в каталог standalone/deployments, перетаскиваем сюда из идеи ваш собранный варник(убедитесь, что вы загружаете нормальный вариант)
 bash bin/standalone.sh
