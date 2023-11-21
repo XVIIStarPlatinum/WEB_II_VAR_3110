@@ -1,6 +1,7 @@
 /*jshint version: 6*/
 /*global console*/
 
+
 $(function(){
     window.history.pushState({}, document.title, "/Lab2");
 

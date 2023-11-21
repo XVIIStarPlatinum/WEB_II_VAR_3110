@@ -84,7 +84,7 @@
                 </div>
                 <div class="r-values">
                     <label for="r-value" class="value-header">r:</label>
-                    <input type="text" name="yVal" id="r-value" placeholder="[2; 5]"/>
+                    <input type="text" name="yVal" id="r-value"  value="2" placeholder="[2; 5]"/>
                 </div>
                 <div class="check-button">
                     <span class="error">Invalid input</span>
@@ -132,7 +132,7 @@
         </div>
     </div>
 <footer>
-    &#169 2023 ITMO
+    &#169 2023 I/İTMO
 </footer>
     <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="main.js"></script>
