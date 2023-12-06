@@ -1,0 +1,51 @@
+.bg-dark{
+
+}
+.graphics {
+    display: grid;
+}
+
+object, canvas, .graphics table {
+    min-width: 300px;
+    min-height: 300px;
+    max-width: 300px;
+    max-height: 300px;
+    grid-column: 1;
+    grid-row: 1;
+}
+canvas {
+    opacity: 1;
+}
+.graphics table, .graphics td {
+    opacity: 1;
+    border: 1px solid  rgba(105, 106, 106, 0.5);
+    width: 30px;
+    height: 30px;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.header-reptilian{
+    display: block;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+.header .header-reptilian,
+.header .text-reptilian {transition: opacity 0.1s ease-in-out;}
+.header .text-reptilian {
+    font-size: 60px;
+    position: absolute;
+    top: 65px;
+    left: 680px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    opacity:0;
+}
+.header:hover .header-reptilian{
+    opacity: 0;
+}
+.header:hover .text-reptilian{
+    opacity: 1;
+}

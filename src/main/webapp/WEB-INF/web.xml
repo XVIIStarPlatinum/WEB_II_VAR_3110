@@ -28,4 +28,20 @@
         <servlet-name>ClearTableServlet</servlet-name>
         <url-pattern>/clear</url-pattern>
     </servlet-mapping>
+    <filter>
+        <filter-name>AreaCheckFilter</filter-name>
+        <filter-class>servlets.AreaCheckFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AreaCheckFilter</filter-name>
+        <url-pattern>/checker</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>AreaCheckFilter</filter-name>
+        <url-pattern>/process</url-pattern>
+    </filter-mapping>
+    <error-page>
+        <error-code>400</error-code>
+        <location>/400.jsp</location>
+    </error-page>
 </web-app>

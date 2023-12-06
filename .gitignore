@@ -33,6 +33,6 @@ build/
 
 ### VS Code ###
 .vscode/
-
+wildfly-27.0.1.Final
 ### Mac OS ###
 .DS_Store

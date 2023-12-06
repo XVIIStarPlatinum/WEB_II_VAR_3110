@@ -7,18 +7,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab2_XVIIstarPt_</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/style.css">
     <link rel="icon" href="img/1610x2048_0xac120004_12729490751685971103.jpeg">
 </head>
 
-<body class="bg-dark">
+<body class="bg-dark" style="background-image: url('/img/Reptilian.jpeg'); background-repeat: no-repeat; background-size: 100% 100%;">
 <div class="container text-light">
     <div class="row mb-5">
         <div class="col-12" style="height: 300px;">
-            <h1 class="text-center mt-3">Лабораторная работа №2, Болорболд Аригуун; группа P3211; вариант 3110</h1>
-            <img class="text-reptilian" src="img/reptilian_header.png"  alt="Болорболд Аригуун группа P3211 вариант 3110">
+            <jsp:include page="header.html"/>
         </div>
     </div>
     <div class="row mb-5" style="margin-top: 100px">
@@ -156,15 +155,17 @@
 <script src="assets/main.js"></script>
 <script>
     rInput.addEventListener("change", function() {
+        if(validateR()){
         clearAllPoint();
         <% if (!EntriesBean.entries.isEmpty()){
             for(int i = EntriesBean.entries.size() - 1; i >= 0; i--){%>
                 drawPointForPage(<%= EntriesBean.entries.get(i).getxValue() %>,
                 <%= EntriesBean.entries.get(i).getyValue() %>, 2);
                 <%
+                }
             }
-        }
         %>
+        }
     })
     window.onload = () => {
         <% if (!EntriesBean.entries.isEmpty()){
@@ -177,5 +178,5 @@
 %>  }
 
 </script>
-<footer></footer>
+<jsp:include page="footer.html"/>
 </html>

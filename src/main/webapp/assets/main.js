@@ -145,7 +145,7 @@ return $.ajax({
     timeout: 0,
         success: function (data){
             $("#table-body").load(location.href + " #beans")
-            drawPointForPage(postData.xVal, postData.yVal, postData.rVal, 2);
+            drawPointForPage(postData.xVal, postData.yVal, postData.rVal);
         },
         error: function(status, exception){
             console.log(exception)
@@ -234,7 +234,7 @@ function drawPlot() {
     drawFourthQuarter(plot_r)
 
     ctx.closePath();
-    ctx.strokeStyle = "blue";
+    ctx.strokeStyle = "yellow";
     ctx.fillStyle = "green";
     ctx.fill();
     ctx.stroke();
@@ -265,7 +265,7 @@ function drawPointForPage(mathX, mathY, delta = 2) {
 
 	ctx.beginPath();
 	ctx.arc(x, y, delta, 0, Math.PI * 2);
-	ctx.fillStyle = "red";
+	ctx.fillStyle = "cyan";
 	ctx.fill();
 }
 function clearAllPoint(){
@@ -282,7 +282,6 @@ canvas.addEventListener("mousedown", (event) => {
         let r_ = params.r;
         params.y = (center_y - y) / plot_r * r_;
         params.x = nearestX((x - center_x) / plot_r * r_);
-        console.log(params.x, params.y, r_)
         yInput.value = params.y;
         submitButton.click();
     } else {

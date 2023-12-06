@@ -1,5 +1,6 @@
 package beans;
 
+import servlets.AreaCheckServlet;
 import java.util.Objects;
 
 public class Entry {
@@ -7,18 +8,20 @@ public class Entry {
     private double yValue;
     private double rValue;
     private String currentTime;
+
     private String executionTime;
     private boolean hitResult;
+    long startTime = System.nanoTime();
     public Entry(){
-        this(0.0, 0.0, 0.0, "", "", false);
+        this(0.0, 0.0, 0.0, "");
     }
-    public Entry(double xValue, double yValue, double rValue, String currentTime, String executionTime, boolean hitResult){
+    public Entry(double xValue, double yValue, double rValue, String currentTime){
         this.xValue = xValue;
         this.yValue = yValue;
         this.rValue = rValue;
         this.currentTime = currentTime;
-        this.executionTime = executionTime;
-        this.hitResult = hitResult;
+        this.executionTime = String.valueOf(System.nanoTime() - startTime);
+        this.hitResult = AreaCheckServlet.checkHit(xValue, yValue, rValue);
     }
     public double getxValue() {
         return xValue;
