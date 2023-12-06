@@ -1,0 +1,30 @@
+
+.graphics {
+    display: grid;
+}
+
+object, canvas, .graphics table {
+    min-width: 300px;
+    min-height: 300px;
+    max-width: 300px;
+    max-height: 300px;
+    grid-column: 1;
+    grid-row: 1;
+}
+canvas {
+    opacity: 1;
+}
+.graphics table, .graphics td {
+    opacity: 1;
+    border: 1px solid  rgba(105, 106, 106, 0.5);
+    width: 30px;
+    height: 30px;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+#text-reptilian{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}

@@ -12,7 +12,7 @@ body{
     background-color: #181818;
 }
 .content{
-    background-image: url(/img/capsule_616x353.jpg);
+    background-image: url(../img/graph-bg.jpg);
     background-size: cover;
     position: relative;
     width: 100%;
@@ -180,16 +180,13 @@ form{
     height: auto;
     margin-bottom: 5px;
 }
-.error{
-    background-color: tomato;
-    border: 6px solid red;
+#header {
+    width:500px;
+    height:253px;
 }
-.text-reptilian{
-    width: 10%;
-    text-align: center;
-    margin: auto;
-}
+#header:hover{
 
+}
 .x-values{
     position: relative;
     display: flex;
@@ -410,7 +407,7 @@ table tbody tr td:nth-child(6){
     font-size: 16px;
     background-color: #008000;
 }
-.w-100 overflow-hidden > #clear-button{
+.table #clear-button{
     margin-top: 20px;
     height: 40px;
     width: 380px;

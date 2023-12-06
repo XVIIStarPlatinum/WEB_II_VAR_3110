@@ -39,10 +39,12 @@ public class AreaCheckServlet extends HttpServlet {
                 String executionTime = String.valueOf(System.nanoTime() - startTime);
                 EntriesBean entries = (EntriesBean) request.getSession().getAttribute("entries");
                 if(entries == null) entries = new EntriesBean();
-                entries.getEntries().add(new Entry(xValue, yValue, rValue, currentTime, executionTime, isHit));
+                EntriesBean.getEntries().add(new Entry(xValue, yValue, rValue, currentTime, executionTime, isHit));
                 request.getSession().setAttribute("entries", entries);
                 getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
-            }
+            } //else {
+//                response.sendRedirect("/400.jsp");
+//            }
         } else {
             getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
         }
@@ -76,16 +78,17 @@ public class AreaCheckServlet extends HttpServlet {
     private boolean validateValues(String xValues, String yValues, String rValues){
         return validateX(xValues) && validateY(yValues) && validateR(rValues);
     }
-    private boolean checkTriangle(double xValue, double yValue, double rValue){
-        return xValue >= 0 && yValue >= 0 && yValue >= (xValue + rValue / 2);
+
+        private boolean checkTriangle ( double xValue, double yValue, double rValue){
+        return xValue >= 0 && yValue >= 0 && xValue <= rValue / 2 && yValue <= rValue && yValue / 2 <= (-xValue + rValue / 2);
     }
-    private boolean checkRectangle(double xValue, double yValue, double rValue){
-        return xValue <= 0 && yValue <= 0 && xValue <= rValue && yValue <= rValue;
+        private boolean checkRectangle ( double xValue, double yValue, double rValue){
+        return xValue <= 0 && yValue <= 0 && Math.abs(xValue) <= rValue && Math.abs(yValue) <= rValue;
     }
-    private boolean checkCircle(double xValue, double yValue, double rValue){
+        private boolean checkCircle ( double xValue, double yValue, double rValue){
         return xValue >= 0 && yValue <= 0 && Math.sqrt(xValue * xValue + yValue * yValue) <= rValue;
     }
-    private boolean checkHit(double xValue, double yValue, double rValue){
-        return checkTriangle(xValue,yValue,rValue) || checkRectangle(xValue, yValue, rValue) || checkCircle(xValue, yValue, rValue);
+        private boolean checkHit ( double xValue, double yValue, double rValue){
+        return checkTriangle(xValue, yValue, rValue) || checkRectangle(xValue, yValue, rValue) || checkCircle(xValue, yValue, rValue);
     }
 }

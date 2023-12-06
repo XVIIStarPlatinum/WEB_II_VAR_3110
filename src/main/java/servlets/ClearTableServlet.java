@@ -15,7 +15,7 @@ public class ClearTableServlet extends HttpServlet {
         if(request.getParameter("clear") != null && request.getParameter("clear").equals("true")){
             EntriesBean entries = (EntriesBean) request.getSession().getAttribute("entries");
             if(entries == null) entries = new EntriesBean();
-            entries.getEntries().clear();
+            EntriesBean.getEntries().clear();
             request.getSession().setAttribute("entries", entries);
             getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
         } else {

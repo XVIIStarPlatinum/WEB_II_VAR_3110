@@ -11,10 +11,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ed8786a-fd98-4dbe-9f03-c733f4ea8ff5" name="Changes" comment="VER0.5: Primordial version with loose ends and untied knots">
-      <change afterPath="$PROJECT_DIR$/src/main/evidence.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/400.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/jquery-3.6.0.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/reptilian.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/old-index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/old-main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Отчёт №2.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/beans/EntriesBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/beans/EntriesBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/AreaCheckServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/AreaCheckServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/ClearTableServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/ClearTableServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/reptilian.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/reptilian.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/Task.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/task.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,14 +38,19 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -63,6 +82,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Dell/OneDrive/Desktop/ITMOrbius/Web_XVIIstarPt_/Lab2&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -77,13 +97,19 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Dell\OneDrive\Desktop\ITMOrbius\Web_XVIIstarPt_\Lab2\src\main\webapp\assets" />
+      <recent name="C:\Users\Dell\OneDrive\Desktop\ITMOrbius\Web_XVIIstarPt_\Lab2\src\main\webapp" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Dell\OneDrive\Desktop\ITMOrbius\Web_XVIIstarPt_\Lab2\src\main\webapp\assets" />
+      <recent name="C:\Users\Dell\OneDrive\Desktop\ITMOrbius\Web_XVIIstarPt_\Lab2" />
       <recent name="C:\Users\Dell\OneDrive\Desktop\ITMOrbius\Web_XVIIstarPt_\Lab2\src\main\webapp\css" />
       <recent name="C:\Users\Dell\OneDrive\Desktop\ITMOrbius\Web_XVIIstarPt_\Lab2\src\main\webapp\img" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="start" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss/WildFly 30" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration name="start" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss/WildFly 27" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/Lab2/" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -189,7 +215,17 @@
       <workItem from="1700505358327" duration="11607000" />
       <workItem from="1700570372940" duration="5308000" />
       <workItem from="1700584012202" duration="220000" />
-      <workItem from="1700584245020" duration="5270000" />
+      <workItem from="1700584245020" duration="28302000" />
+      <workItem from="1701621419568" duration="408000" />
+      <workItem from="1701622142676" duration="5731000" />
+      <workItem from="1701709924004" duration="955000" />
+      <workItem from="1701722794738" duration="1124000" />
+      <workItem from="1701772665427" duration="1537000" />
+      <workItem from="1701776073221" duration="999000" />
+      <workItem from="1701779736737" duration="3260000" />
+      <workItem from="1701797366076" duration="15538000" />
+      <workItem from="1701824609771" duration="10255000" />
+      <workItem from="1701835403652" duration="15150000" />
     </task>
     <task id="LOCAL-00001" summary="VER0.5: Primordial version with loose ends and untied knots">
       <option name="closed" value="true" />
@@ -199,11 +235,46 @@
       <option name="project" value="LOCAL" />
       <updated>1700510533815</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="VER0.5: Primordial version with loose ends and untied knots">
+      <option name="closed" value="true" />
+      <created>1700593429921</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1700593429921</updated>
+    </task>
+    <task id="LOCAL-00003" summary="VER0.5: Primordial version with loose ends and untied knots">
+      <option name="closed" value="true" />
+      <created>1700598150612</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1700598150612</updated>
+    </task>
+    <task id="LOCAL-00004" summary="VER0.5: Primordial version with loose ends and untied knots">
+      <option name="closed" value="true" />
+      <created>1700598180157</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1700598180157</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

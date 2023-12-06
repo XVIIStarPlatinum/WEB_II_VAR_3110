@@ -2,103 +2,121 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
 <jsp:useBean id="entries" class="beans.EntriesBean" scope="session"/>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="img/logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
-    <link id="theme" rel="stylesheet" type="text/css" href="css/reptilian.css">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab2_XVIIstarPt_</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="icon" href="img/1610x2048_0xac120004_12729490751685971103.jpeg">
 </head>
-<body>
-    <div class="container">
-        <div class="content">
-            <div class="bg-opacity"></div>
-            <div class="header">
-                <p>Лабораторная работа №2</p>
-            </div>
-            <div class="left">
-                <img id="header" src="img/reptilian_header.png" alt="
-                Болорболд Аригуун
-                P3211
-                Вариант 3110">
-                <a href="https://www.youtube.com/shorts/hf9hH65SwNI" target="_blank"><button type="button" class="github">GitHub</button></a>
+
+<body class="bg-dark">
+<div class="container text-light">
+    <div class="row mb-5">
+        <div class="col-12" style="height: 300px;">
+            <h1 class="text-center mt-3">Лабораторная работа №2, Болорболд Аригуун; группа P3211; вариант 3110</h1>
+            <img class="text-reptilian" src="img/reptilian_header.png"  alt="Болорболд Аригуун группа P3211 вариант 3110">
+        </div>
+    </div>
+    <div class="row mb-5" style="margin-top: 100px">
+        <div class="col-md-6">
+            <div class="graphics">
+                <table id="grid-table">
+                    <tbody></tbody>
+                </table>
+                <canvas class="bg-whites" id="myGraph" width="300px" height="300px"></canvas>
+
             </div>
         </div>
-        <div class="main">
-            <div class="graph">
-                <object id="graph" data="img/Task.svg" style="overflow: visible"></object>
-                <canvas id="myGraph" height="300px" width="300px"></canvas>
-                <canvas id="savedPoint" height="300px" width="300px"></canvas>
-                <canvas id="point" height="300px" width="300px"></canvas>
-            </div>
-            <form id="submit-form">
-                <div class="x-values">
-                    <label class="value-header">x:</label><br>
-                    <div class="labels">
-                        <hr>
-                        <label class="label">
-                            <input type="radio" class="x-value" value="-2" name="xVal" />
-                            <p class="values">-2</p>
-                        </label>
-                        <label class="label">
-                            <input type="radio" class="x-value" value="-1.5" name="xVal" />
-                            <p class="values">-1.5</p>
-                        </label>
-                        <label class="label">
-                            <input type="radio" class="x-value" value="-1" name="xVal" />
-                            <p class="values">-1</p>
-                        </label>
-                        <label class="label">
-                            <input type="radio" class="x-value" value="-0.5" name="xVal" />
-                            <p class="values">-0.5</p>
-                        </label>
-                        <label class="label">
-                            <input type="radio" class="x-value" value="0" name="xVal" />
-                            <p class="values">0</p>
-                        </label>
-                        <label class="label">
-                            <input type="radio" class="x-value" value="0.5" name="xVal" />
-                            <p class="values">0.5</p>
-                        </label>
-                        <label class="label">
-                            <input type="radio" class="x-value" value="1" name="xVal" />
-                            <p class="values">1</p>
-                        </label>
-                        <label class="label">
-                            <input type="radio" class="x-value" value="1.5" name="xVal" />
-                            <p class="values">1.5</p>
-                        </label>
-                        <label class="label">
-                            <input type="radio" class="x-value" value="2" name="xVal" />
-                            <p class="values">2</p>
-                        </label>
+        <div class="col-md-6">
+            <form>
+                <div class="mb-3">
+                    <div class="x-values">
+                        <label class="value-header">X:&nbsp;<b id="x-value-label"></b></label><br>
+                        <div class="labels">
+                            <br>
+                            <label class="label mx-2">
+                                <input type="radio" class="x-value" value="-2" name="x-value" />
+                                <p class="values">-2</p>
+                            </label>
+                            <label class="label mx-2">
+                                <input type="radio" class="x-value" value="-1.5" name="x-value" />
+                                <p class="values">-1.5</p>
+                            </label>
+                            <label class="label mx-2">
+                                <input type="radio" class="x-value" value="-1" name="x-value" />
+                                <p class="values">-1</p>
+                            </label>
+                            <label class="label mx-2">
+                                <input type="radio" class="x-value" value="-0.5" name="x-value" />
+                                <p class="values">-0.5</p>
+                            </label>
+                            <label class="label mx-2">
+                                <input type="radio" class="x-value" value="0" name="x-value" />
+                                <p class="values">0</p>
+                            </label>
+                            <label class="label mx-2">
+                                <input type="radio" class="x-value" value="0.5" name="x-value" />
+                                <p class="values">0.5</p>
+                            </label>
+                            <label class="label mx-2">
+                                <input type="radio" class="x-value" value="1" name="x-value" />
+                                <p class="values">1</p>
+                            </label>
+                            <label class="label mx-2">
+                                <input type="radio" class="x-value" value="1.5" name="x-value" />
+                                <p class="values">1.5</p>
+                            </label>
+                            <label class="label mx-2">
+                                <input type="radio" class="x-value" value="2" name="x-value" />
+                                <p class="values">2</p>
+                            </label>
+                        </div>
                     </div>
                 </div>
-                <div class="y-values">
-                    <label for="y-value" class="value-header">y:</label>
-                    <input type="text" name="yVal" id="y-value" placeholder="[-5; 3]"/>
+                <div class="mb-3">
+                    <label for="y-value" class="form-label">Y:</label>
+                    <input type="text" class="form-control" id="y-value" placeholder="[-5; 3]">
                 </div>
-                <div class="r-values">
-                    <label for="r-value" class="value-header">r:</label>
-                    <input type="text" name="yVal" id="r-value"  value="2" placeholder="[2; 5]"/>
+                <div class="mb-3">
+                    <label for="r-value" class="form-label">Radius:</label>
+                    <input type="text" value="2" class="form-control" id="r-value" placeholder="[2; 5]">
                 </div>
-                <div class="check-button">
-                    <span class="error">Invalid input</span>
-                    <input id="submit" type="submit" class="check-button"/>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-success w-100">Submit</button>
                 </div>
             </form>
         </div>
-        <div class="result">
-            <div class="table">
+    </div>
+    <div class="row mb-5 bg-light text-dark d-none">
+        <div class="col-12">
+            <h2 class="text-center">Result</h2>
+            <table class="table w-100" id="results-table">
+                <thead>
+                <tr>
+                    <th>X</th>
+                    <th>Y</th>
+                    <th>R</th>
+                    <th>Date</th>
+                    <th>Run Time</th>
+                    <th>Result</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="w-100 overflow-hidden">
                 <div>
                     <h2 id="result-h2">Result</h2>
                 </div>
                 <div class="table-items">
-                    <table id="result-table">
+                    <table class="table w-100" id="result-table">
                         <thead>
                         <tr>
                             <th>X</th>
@@ -131,20 +149,33 @@
             </div>
         </div>
     </div>
-<footer>
-    &#169 2023 I/İTMO
-</footer>
-    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="main.js"></script>
-<%--    <script>--%>
-<%--        function toggleTheme() {--%>
-<%--            let theme = document.getElementById("theme");--%>
-<%--            if(theme.getAttribute('href') === 'reptilian.css'){--%>
-<%--                theme.setAttribute('href', 'rus.css');--%>
-<%--            } else {--%>
-<%--                theme.setAttribute('href', 'reptilian.css');--%>
-<%--            }--%>
-<%--        }--%>
-<%--    </script>--%>
+</div>
+
 </body>
+<script src="assets/jquery-3.6.0.min.js"></script>
+<script src="assets/main.js"></script>
+<script>
+    rInput.addEventListener("change", function() {
+        clearAllPoint();
+        <% if (!EntriesBean.entries.isEmpty()){
+            for(int i = EntriesBean.entries.size() - 1; i >= 0; i--){%>
+                drawPointForPage(<%= EntriesBean.entries.get(i).getxValue() %>,
+                <%= EntriesBean.entries.get(i).getyValue() %>, 2);
+                <%
+            }
+        }
+        %>
+    })
+    window.onload = () => {
+        <% if (!EntriesBean.entries.isEmpty()){
+            for(int i = EntriesBean.entries.size() - 1; i >= 0; i--){%>
+                drawPointForPage(<%= EntriesBean.entries.get(i).getxValue() %>,
+                <%= EntriesBean.entries.get(i).getyValue() %>, 2);
+            <%
+            }
+        }
+%>  }
+
+</script>
+<footer></footer>
 </html>

@@ -10,7 +10,7 @@ public class EntriesBean {
     public EntriesBean(List<Entry> entries){
         EntriesBean.entries = entries;
     }
-    public List<Entry> getEntries(){
+    public static List<Entry> getEntries(){
         return entries;
     }
     public int getSize(){
